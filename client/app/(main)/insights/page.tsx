@@ -1,7 +1,6 @@
 "use client";
 
 import { useInsights } from "@/hooks/useInsights";
-import { Spinner } from "@/components/Spinner";
 import { InsightCard } from "@/components/InsightCard";
 import { WeeklyChart } from "@/components/WeeklyChart";
 import { FileText, Archive, Sparkles, Tag as TagIcon, ArrowRight } from "lucide-react";

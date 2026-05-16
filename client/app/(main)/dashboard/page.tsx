@@ -4,7 +4,7 @@ import { useCreateNote, useNotes } from "@/hooks/useNotes";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import { Plus, FileText, ArrowRight, Sparkles } from "lucide-react";
-import { formatRelativeTime, cn } from "@/lib/utils";
+import { formatRelativeTime } from "@/lib/utils";
 import { useAuth } from "@/contexts/AuthContext";
 import { SkeletonNote } from "@/components/SkeletonNote";
 
