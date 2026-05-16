@@ -53,14 +53,10 @@ export default function SignupPage() {
 
   return (
     <div className="flex min-h-screen bg-[var(--base)] overflow-hidden relative">
-      {/* BACKGROUND INTERACTIVE MESH - Optimized for Mobile */}
+      {/* BACKGROUND INTERACTIVE MESH */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         <div className="absolute top-[-10%] left-[-10%] w-[100%] md:w-[50%] h-[50%] bg-[var(--accent)] opacity-[0.05] md:opacity-[0.03] blur-[100px] md:blur-[120px] rounded-full animate-mesh"></div>
         <div className="absolute bottom-[-10%] right-[-10%] w-[100%] md:w-[50%] h-[50%] bg-[var(--accent)] opacity-[0.05] md:opacity-[0.03] blur-[100px] md:blur-[120px] rounded-full animate-mesh stagger-2"></div>
-        
-        {/* Mobile-only floating particles */}
-        <div className="absolute top-1/3 left-1/4 w-1 h-1 bg-[var(--accent)] rounded-full animate-float opacity-20 lg:hidden"></div>
-        <div className="absolute top-2/3 right-1/3 w-1.5 h-1.5 bg-[var(--accent)] rounded-full animate-float-slow opacity-10 lg:hidden stagger-3"></div>
       </div>
 
       {/* Left Column - Branding (Hidden on Mobile) */}
@@ -76,7 +72,7 @@ export default function SignupPage() {
         </div>
         
         <div className="relative">
-          {/* FLOATING PREVIEW CARDS */}
+          {/* FLOATING PREVIEW CARDS - Reverted to original positions */}
           <div className="absolute -top-32 -left-8 w-64 p-4 glass-card rounded-[var(--radius-lg)] animate-float opacity-80 shadow-2xl pointer-events-none">
              <div className="font-mono text-[10px] text-[var(--accent)] mb-2">RECENT NOTE</div>
              <div className="h-2 w-3/4 bg-[var(--border)] rounded mb-2"></div>
@@ -233,7 +229,7 @@ export default function SignupPage() {
           </div>
         </div>
 
-        {/* MOBILE FEATURES GRID - Optimized for small screens */}
+        {/* MOBILE FEATURES GRID */}
         <div className="lg:hidden w-full max-w-[420px] mt-16 pb-12 animate-fadeIn stagger-4 space-y-10">
            <div className="grid grid-cols-1 gap-8">
               <div className="flex items-start space-x-4 group">
