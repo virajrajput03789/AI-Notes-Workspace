@@ -14,10 +14,16 @@ app.use(cors({
 }));
 app.use(express.json());
 
-app.use('/auth', authRoutes);
-app.use('/notes', notesRoutes);
-app.use('/shared', sharedRoutes);
-app.use('/insights', insightsRoutes);
+// Prefix all routes with /api
+app.use('/api/auth', authRoutes);
+app.use('/api/notes', notesRoutes);
+app.use('/api/shared', sharedRoutes);
+app.use('/api/insights', insightsRoutes);
+
+// Health check endpoint
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'ok' });
+});
 
 app.use(errorHandler);
 
