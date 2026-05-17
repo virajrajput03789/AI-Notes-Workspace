@@ -196,7 +196,12 @@ export default function LoginPage() {
               disabled={loading}
               className="group relative flex w-full h-[52px] items-center justify-center rounded-[var(--radius-md)] bg-[var(--accent)] text-[#0A0A0A] font-bold text-[14px] transition-all duration-300 hover:brightness-110 hover:-translate-y-[2px] hover:shadow-[0_8px_24px_rgba(232,213,163,0.15)] active:translate-y-0 disabled:opacity-50 disabled:cursor-not-allowed animate-fadeIn stagger-3"
             >
-              {loading ? <Spinner size="sm" /> : (
+              {loading ? (
+                <div className="flex items-center space-x-2">
+                  <Spinner size="sm" className="text-[#0A0A0A]" />
+                  <span>Signing in...</span>
+                </div>
+              ) : (
                 <div className="flex items-center space-x-2">
                   <span>Sign In to Workspace</span>
                   <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />

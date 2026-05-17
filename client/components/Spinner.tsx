@@ -1,4 +1,10 @@
-export function Spinner({ size = "md" }: { size?: "sm" | "md" | "lg" }) {
+export function Spinner({ 
+  size = "md", 
+  className = "text-accent" 
+}: { 
+  size?: "sm" | "md" | "lg"; 
+  className?: string 
+}) {
   const sizeClasses = {
     sm: "w-4 h-4",
     md: "w-6 h-6",
@@ -7,7 +13,7 @@ export function Spinner({ size = "md" }: { size?: "sm" | "md" | "lg" }) {
 
   return (
     <svg
-      className={`animate-spin text-accent ${sizeClasses[size]}`}
+      className={`animate-spin ${sizeClasses[size]} ${className}`}
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"

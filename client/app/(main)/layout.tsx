@@ -19,14 +19,14 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
 
   if (isLoading || !isAuthenticated) {
     return (
-      <div className="flex h-screen items-center justify-center bg-base text-text">
+      <div className="flex h-screen h-[100dvh] items-center justify-center bg-base text-text">
         <Spinner size="lg" />
       </div>
     );
   }
 
   return (
-    <div className="flex h-screen overflow-hidden bg-base relative">
+    <div className="flex h-screen h-[100dvh] overflow-hidden bg-base relative">
       <Sidebar 
         isOpen={isMobileMenuOpen} 
         onToggle={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

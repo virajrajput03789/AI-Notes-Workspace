@@ -93,12 +93,9 @@ export function Sidebar({ isOpen, onToggle, onNavigate }: SidebarProps) {
       {/* Sidebar Panel */}
       <aside 
         className={cn(
-          "fixed top-0 left-0 h-full w-[85vw] max-w-[280px] bg-[var(--surface)] border-r border-[var(--border)] z-50 transform transition-transform duration-300 ease-out overflow-y-auto md:relative md:translate-x-0 md:z-auto md:w-[280px] flex-shrink-0 flex flex-col h-screen",
+          "fixed inset-y-0 left-0 w-[85vw] max-w-[280px] bg-[var(--surface)] border-r border-[var(--border)] z-50 transform transition-transform duration-300 ease-out md:relative md:translate-x-0 md:z-auto md:w-[280px] md:h-screen flex-shrink-0 flex flex-col",
           isOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
         )}
-        style={{
-          background: 'linear-gradient(to bottom, var(--surface), transparent)',
-        }}
       >
         
         {/* Header */}
@@ -232,7 +229,7 @@ export function Sidebar({ isOpen, onToggle, onNavigate }: SidebarProps) {
         </div>
 
         {/* Footer User Profile */}
-        <div className="p-4 border-t border-[var(--border)] flex items-center justify-between">
+        <div className="p-4 pb-[max(1rem,env(safe-area-inset-bottom))] border-t border-[var(--border)] flex items-center justify-between">
           <div className="flex items-center space-x-3 overflow-hidden">
             <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[var(--surface-3)] border border-[var(--border)] flex items-center justify-center text-[12px] font-medium text-[var(--accent)]">
               {getInitials(user?.email || "")}
